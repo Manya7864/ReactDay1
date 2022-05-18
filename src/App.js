@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Operating from './component/Assign1.jsx';
+// import {Navbar ,Link,Button1} from './component/Assign2';
 function App() {
+
+let mobile=["Android","Blackberry","iphone","Window phone"]
+let newmobile=mobile.map((mobiles)=>
+{
+  return<li>{mobiles}</li>
+
+})
+let manf=["Samsung","Htc","Micromax","Apple"]
+let newmanf=manf.map((manf1)=>
+{
+  return<li>{manf1}</li>
+
+})
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Operating first={newmobile} second={newmanf}/>
+      
+      {/* <Navbar/> */}
+      {/* <Link/> */}
+      {/* <Button1/> */}
+      
+      
     </div>
   );
 }
